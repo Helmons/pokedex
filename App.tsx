@@ -9,6 +9,7 @@ import {
 } from '@expo-google-fonts/roboto'
 
 import { Home } from './src/screens/Home';
+import { Details } from './src/screens/Details';
 
 
 export default function App() {
@@ -23,7 +24,9 @@ export default function App() {
   }
 
   return (
-      <Home/>
+    
+    <Details/>
+     // <Home/>
     
   )
 }

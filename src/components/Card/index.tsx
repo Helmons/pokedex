@@ -1,13 +1,25 @@
 import React from "react";
-import { View } from "react-native";
+import { View, Text } from "react-native";
+import Ionicons from '@expo/vector-icons/Ionicons';
 import { styles } from "./styles";
+import theme from "../../styles/theme";
+
+interface Cardprops {
+    title: string;
+    icon: boolean;
+}
 
 
-
-export function Card() {
+export function Card({ title, icon = false } : Cardprops) {
     return (
         <View style={styles.container}>
-            
+            <Text style={styles.title}>{title}</Text>
+
+            <Ionicons
+                name={icon ? "heart-sharp" : "heart-outline"}
+                size={24}
+                color={theme.colors.border_color}
+            />
         </View>
     )
 }
