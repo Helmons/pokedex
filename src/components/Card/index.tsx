@@ -1,5 +1,5 @@
 import React from "react";
-import { View, Text } from "react-native";
+import { View, Text, Button, TouchableOpacity } from "react-native";
 import Ionicons from '@expo/vector-icons/Ionicons';
 import { styles } from "./styles";
 import theme from "../../styles/theme";
@@ -7,12 +7,13 @@ import theme from "../../styles/theme";
 interface Cardprops {
     title: string;
     icon: boolean;
+    onPress: () => void;
 }
 
 
-export function Card({ title, icon = false } : Cardprops) {
+export function Card({ title, onPress, icon = false } : Cardprops) {
     return (
-        <View style={styles.container}>
+        <TouchableOpacity style={styles.container} onPress={onPress}>
             <Text style={styles.title}>{title}</Text>
 
             <Ionicons
@@ -20,6 +21,6 @@ export function Card({ title, icon = false } : Cardprops) {
                 size={24}
                 color={theme.colors.border_color}
             />
-        </View>
+        </TouchableOpacity>
     )
 }

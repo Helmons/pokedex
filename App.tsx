@@ -10,6 +10,7 @@ import {
 
 import { Home } from './src/screens/Home';
 import { Details } from './src/screens/Details';
+import { Routes } from './src/routes';
 
 
 export default function App() {
@@ -24,9 +25,6 @@ export default function App() {
   }
 
   return (
-    
-    <Details/>
-     // <Home/>
-    
+    <Routes/>
   )
 }

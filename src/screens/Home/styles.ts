@@ -1,4 +1,5 @@
 import { StyleSheet, Text, View } from 'react-native';
+import { getStatusBarHeight } from 'react-native-iphone-x-helper';
 import theme from '../../styles/theme'
 
 export const styles = StyleSheet.create({
@@ -16,7 +17,7 @@ export const styles = StyleSheet.create({
         alignSelf: 'flex-start',
         padding: 10,
 
-        marginTop: 10,
+        marginTop: getStatusBarHeight() + 20,
     },
 
     logo: {

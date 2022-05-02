@@ -17,8 +17,8 @@ export const styles = StyleSheet.create({
 
     title: {
         width: '50%',
-        fontFamily: theme.fonts.primary_500,
-        fontSize: 17,
+        fontFamily: theme.fonts.primary_400,
+        fontSize: 18,
         color: theme.colors.text_color,
     }
 })
