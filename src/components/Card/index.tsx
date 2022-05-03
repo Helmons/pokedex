@@ -7,11 +7,21 @@ import theme from "../../styles/theme";
 interface Cardprops {
     title: string;
     icon: boolean;
-    onPress: () => void;
+    activeIcon?: boolean;
+    onPress?: () => void;
 }
 
 
-export function Card({ title, onPress, icon = false } : Cardprops) {
+export function Card({ title, onPress, icon = false, activeIcon = true }: Cardprops) {
+
+    if (!activeIcon) {
+        return (
+            <TouchableOpacity style={styles.containerWithoutIcon} onPress={onPress}>
+                <Text style={styles.titleWithoutIcon}>{title}</Text>
+            </TouchableOpacity>
+        )
+    }
+
     return (
         <TouchableOpacity style={styles.container} onPress={onPress}>
             <Text style={styles.title}>{title}</Text>

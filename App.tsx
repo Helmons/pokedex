@@ -11,6 +11,8 @@ import {
 import { Home } from './src/screens/Home';
 import { Details } from './src/screens/Details';
 import { Routes } from './src/routes';
+import { StatusBar } from 'react-native';
+import { AppProvider } from './src/hooks';
 
 
 export default function App() {
@@ -20,11 +22,17 @@ export default function App() {
     Roboto_700Bold
   })
 
-  if(!fontsLoaded) {
-    return <AppLoading/>
+  if (!fontsLoaded) {
+    return <AppLoading />
   }
 
   return (
-    <Routes/>
+
+    <AppProvider>
+      <StatusBar barStyle='light-content' translucent backgroundColor='transparent' />
+      <Routes />
+    </AppProvider>
+
+
   )
 }

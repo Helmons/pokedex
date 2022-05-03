@@ -17,7 +17,7 @@ export const styles = StyleSheet.create({
         alignSelf: 'flex-start',
         padding: 10,
 
-        marginTop: getStatusBarHeight() + 20,
+        marginTop: getStatusBarHeight(),
     },
 
     logo: {
@@ -29,6 +29,7 @@ export const styles = StyleSheet.create({
     content: {
         height: '75%',
         alignItems: 'center',
+        justifyContent: 'center',
         width: '100%',
         padding: 10,
     },

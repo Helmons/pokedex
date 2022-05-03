@@ -2,6 +2,7 @@ export default {
     colors: {
         background_primary: '#181B23',
         background_secondary: "#353646",
+        placeholder_color: "#B3B5C6",
         
         border_color: '#ECC94B',
 

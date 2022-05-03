@@ -15,6 +15,25 @@ export const styles = StyleSheet.create({
         marginBottom: 10,
     },
 
+    containerWithoutIcon: {
+        width: '100%',
+        backgroundColor: theme.colors.background_secondary,
+        flexDirection: 'row',
+        alignItems: 'center',
+        justifyContent: 'center',
+        padding: 10,
+
+        borderRadius: 10,
+
+        marginBottom: 10,
+    },
+
+    titleWithoutIcon: {
+        fontFamily: theme.fonts.primary_400,
+        fontSize: 18,
+        color: theme.colors.text_color,
+    },
+
     title: {
         width: '50%',
         fontFamily: theme.fonts.primary_400,

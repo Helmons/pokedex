@@ -3,6 +3,7 @@ import { createNativeStackNavigator } from '@react-navigation/native-stack'
 
 import { Home } from '../screens/Home';
 import { Details } from '../screens/Details';
+import { AppTabRoutes } from './app.tab.routes';
 
 
 const { Navigator, Screen } = createNativeStackNavigator()
@@ -18,10 +19,10 @@ declare global {
 
 export function AppStackRoutes() {
     return (
-        <Navigator initialRouteName="Home" screenOptions={{headerShown: false, animation: 'none'}}>
+        <Navigator initialRouteName="AppTabRoutes" screenOptions={{headerShown: false, animation: 'none'}}>
             <Screen
-                name='Home'
-                component={Home}
+                name='AppTabRoutes'
+                component={AppTabRoutes}
             />
             <Screen
                 name='Details'
